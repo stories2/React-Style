@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
+import "./App.css";
 
-function App() {
+class App extends Component {
+  render() {
+    return (
+      <Fragment>
+        <Button isDanger={true}></Button>
+        <Button isDanger={false}></Button>
+      </Fragment>
+    )
+  }
+}
+
+const Button = ({isDanger}) => {
   return (
-    <div className="App">
-    </div>
-  );
+    <button className={isDanger ? "button button--danger" : "button button--success"}>Hello</button>
+  )
 }
 
 export default App;
