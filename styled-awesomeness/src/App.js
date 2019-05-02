@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
-import "./App.css";
+// import "./App.css";
+import styled from "styled-components";
 
 class App extends Component {
   render() {
@@ -12,10 +13,18 @@ class App extends Component {
   }
 }
 
-const Button = ({isDanger}) => {
-  return (
-    <button className={isDanger ? "button button--danger" : "button button--success"}>Hello</button>
-  )
-}
+const Button = styled.button`
+  border-radius: 50px;
+  padding: 5px;
+  min-width: 120px;
+  color:white;
+  font-weight: 600;
+  -webkit-appearance: none;
+  cursor: pointer;
+  &:active,
+  &:focus{
+    outline: none;
+  }
+`
 
 export default App;
